@@ -3,7 +3,6 @@ HELP.md
 /build/
 !gradle/wrapper/gradle-wrapper.jar
 .DS_Store
-init_app.sh
 
 ### STS ###
 .apt_generated

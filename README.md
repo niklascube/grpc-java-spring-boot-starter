@@ -6,7 +6,11 @@ Clone and initialize me
    ```
     $> git clone https://github.com/niklascube/grpc-java-spring-boot-starter.git
     $> cd grpc-java-spring-boot-starter
+    $> ./init_app.sh`
    ```
+
+init_app.sh will initialize app. It will rename all files, folders and strings  
+to your name which you have to enter after executing init_app.sh. 
  
 Build the project in order to generate the Java-classes out of your proto file.  
 Then you able to run your project ;-)  

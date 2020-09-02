@@ -1,4 +1,4 @@
-package com.pwc.myapp;
+package com.myapp;
 
 
 import org.springframework.boot.SpringApplication;

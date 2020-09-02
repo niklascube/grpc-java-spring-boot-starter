@@ -1,7 +1,7 @@
-package com.pwc.myapp;
+package com.myapp;
 
-import grpc.pwc.MyApp;
-import grpc.pwc.helloGrpc;
+import grpc.MyApp;
+import grpc.helloGrpc;
 import io.grpc.internal.testing.StreamRecorder;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

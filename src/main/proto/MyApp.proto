@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option java_package= "grpc.pwc";
+option java_package= "grpc";
 
 message HelloRequest {
   string message = 1;

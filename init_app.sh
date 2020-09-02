@@ -28,14 +28,12 @@ fi
 NAME=$answer
 source_folder='src'
 
-folder_list=($source_folder/main/java/com/pwc/myapp/*.java
+folder_list=($source_folder/main/java/com/myapp/*.java
              $source_folder/main/proto/*.proto
-             $source_folder/test/java/com/pwc/myapp/*.java
+             $source_folder/test/java/com/myapp/*.java
              )
 
-file_list=(Makefile
-           Dockerfile
-           build.gradle
+file_list=(build.gradle
            src/main/resources/application.properties
            src/test/resources/application.properties
            settings.gradle)
@@ -71,18 +69,18 @@ for file in "${file_list[@]}"
 NAME_IN_UPPERCASE=$(first_char_to_uppercase $NAME)
 
 # rename main java class file
-mv src/main/java/com/pwc/myapp/MyAppApplication.java src/main/java/com/pwc/myapp/${NAME_IN_UPPERCASE}Application.java
-mv src/test/java/com/pwc/myapp/MyAppTest.java src/test/java/com/pwc/myapp/${NAME_IN_UPPERCASE}Test.java
+mv src/main/java/com/myapp/MyAppApplication.java src/main/java/com/myapp/${NAME_IN_UPPERCASE}Application.java
+mv src/test/java/com/myapp/MyAppTest.java src/test/java/com/myapp/${NAME_IN_UPPERCASE}Test.java
 mv src/main/proto/MyApp.proto src/main/proto/${NAME_IN_UPPERCASE}.proto
 
 # rename main class
-replace_string_in_file src/main/java/com/pwc/myapp/${NAME_IN_UPPERCASE}Application.java $NAME_IN_UPPERCASE MyApp
-replace_string_in_file src/main/java/com/pwc/myapp/HelloService.java $NAME_IN_UPPERCASE MyApp
-replace_string_in_file src/test/java/com/pwc/myapp/${NAME_IN_UPPERCASE}Test.java $NAME_IN_UPPERCASE MyApp
+replace_string_in_file src/main/java/com/myapp/${NAME_IN_UPPERCASE}Application.java $NAME_IN_UPPERCASE MyApp
+replace_string_in_file src/main/java/com/myapp/HelloService.java $NAME_IN_UPPERCASE MyApp
+replace_string_in_file src/test/java/com/myapp/${NAME_IN_UPPERCASE}Test.java $NAME_IN_UPPERCASE MyApp
 
 # rename  folder
-mv src/main/java/com/pwc/myapp src/main/java/com/pwc/$NAME
-mv src/test/java/com/pwc/myapp src/test/java/com/pwc/$NAME
+mv src/main/java/com/myapp src/main/java/com/$NAME
+mv src/test/java/com/myapp src/test/java/com/$NAME
 
 #overwrite manifests for grpc
 
